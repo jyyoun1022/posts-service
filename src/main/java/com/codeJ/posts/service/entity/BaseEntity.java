@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseEntity {
 
-    @Column(name = "created_date",nullable = false)
+    @Column(name = "created_date",nullable = false,updatable = false)
     private String createdDate;
     @Column(name = "modified_date",nullable = false)
     private String modifiedDate;
@@ -22,8 +22,8 @@ public abstract class BaseEntity {
      */
     @PrePersist//해당 테이블의 insert 연산을 실행할때 같이 실행
     public void onPrePersist(){
-        this.createdDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd"));
-        this.modifiedDate = this.createdDate;
+        this.createdDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss"));
+        this.modifiedDate = createdDate;
     }
 
     /** 해당 엔티티를 업데이트 하기 이전에 실행*/

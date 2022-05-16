@@ -15,8 +15,8 @@ public interface UserRepository extends JpaRepository<User,Long> {
     /** user GET*/
     User findByNickname(String nickname);
 
-    /** 중복검사 */
-    boolean existByUsername(String username);
-    boolean existByNickname(String nickname);
-    boolean existByEmail(String email);
+//    /** 중복검사 */
+//    boolean existByUsername(String username);
+//    boolean existByNickname(String nickname);
+//    boolean existByEmail(String email);
 }

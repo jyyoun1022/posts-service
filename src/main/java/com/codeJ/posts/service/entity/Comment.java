@@ -1,9 +1,6 @@
 package com.codeJ.posts.service.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -15,6 +12,7 @@ import javax.persistence.*;
 @Getter
 @Table(name = "comments")
 @Entity
+@ToString
 public class Comment {
 
     @Id
