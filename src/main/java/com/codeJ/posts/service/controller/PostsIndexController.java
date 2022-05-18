@@ -21,6 +21,6 @@ public class PostsIndexController {
 //    @GetMapping("/")                    // default page = 0, size= 10
 //    public String index(Model model, @PageableDefault(sort = "id",direction = Sort.Direction.DESC),
 //                        Pageable pageable, @LoginUser UserDTO.Response user){
-//
 //    }
+
 }

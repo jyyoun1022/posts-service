@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <h1 class="mt-4">Posts List Page</h1>
+
+    <form th:action="@{/posts/list" th:method="get" id="searchForm">
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+                <th scope="col">조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="dto : ${result.dtoList}">
+<!--                <td>[[${dto.bno}]]</td>-->
+<!--                <td>[[${dto.title}]]</td>-->
+<!--                <td>[[${writer}]]</td>-->
+<!--                <td>[[${createDate}]]</td>-->
+<!--                <td>[[${view}]]</td>-->
+            </tr>
+        </tbody>
+        </table>
+    </form>
+
+
+</th:block>
+</html>
